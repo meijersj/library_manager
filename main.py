@@ -30,6 +30,20 @@ class Book:
         self.is_borrowed = False
 
 class Library:
+    def __init__(self):
+        self.books = []
+        self.members = []
+        self.borrowed = []
+    def add_book(self,Book):
+        self.books.append(Book)
+
 
 class Member:
+    def __init__(self, name,surname,address,phone ):
+        self.name = name
+        self.surname = surname
+        self.address = address
+        self.phone = phone
+
+
 

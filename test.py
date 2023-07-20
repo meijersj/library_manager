@@ -7,10 +7,10 @@ lib = Library()
 # Add books to the library
 for title, author in book_list:
     lib.add_book(Book(title, author))
-
+print(lib.books)
 # Register members in the library
 for name in member_names:
-    lib.register_member(Member(name))
+    lib.add_member(Member(name))
 
 # Members borrow books
 lib.borrow_book("Alice", "1984")
@@ -30,3 +30,7 @@ lib.return_book("Bob", "The Great Gatsby")
 print("\nAvailable Books after some returns:")
 for book in lib.get_available_books():
     print(f"{book.title} by {book.author}")
+
+# test append from book_list
+lib.add_book(book_list)
+

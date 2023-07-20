@@ -36,23 +36,22 @@ class Library:
         self.borrowed = []
     def add_book(self,Book):
         self.books.append(Book)
-    def add_Member(self,Book):
-        self.Member.append(Member)
+    def add_member(self,Member):
+        self.members.append(Member)
 
     def borrow_book (self,Member,Book):
         if Book in self.books and Member in self.members:
             self.books.remove(Book)
         #key-value? self.books_borrowed[Member] = Book
-
- def get_member(self):
+    def get_member(self):
         return self.members
- def get_books(self):
+    def get_books(self):
         return self.books
 
 
 
 class Member:
-    def __init__(self, name,surname,address,phone ):
+    def __init__(self, name,surname="",address="",phone="" ):
         self.name = name
         self.surname = surname
         self.address = address

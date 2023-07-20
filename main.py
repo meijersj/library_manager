@@ -36,6 +36,19 @@ class Library:
         self.borrowed = []
     def add_book(self,Book):
         self.books.append(Book)
+    def add_Member(self,Book):
+        self.Member.append(Member)
+
+    def borrow_book (self,Member,Book):
+        if Book in self.books and Member in self.members:
+            self.books.remove(Book)
+        #key-value? self.books_borrowed[Member] = Book
+
+ def get_member(self):
+        return self.members
+ def get_books(self):
+        return self.books
+
 
 
 class Member:

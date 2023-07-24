@@ -42,7 +42,9 @@ class Library:
     def borrow_book (self,Member,Book):
         if Book in self.books and Member in self.members:
             self.books.remove(Book)
-        #key-value? self.books_borrowed[Member] = Book
+         self.books_borrowed[Member] = Book
+        else
+         print ('error, book is not in the list, try again in 10 days')
     def get_member(self):
         return self.members
     def get_books(self):

@@ -33,4 +33,5 @@ for book in lib.get_available_books():
 
 # test append from book_list
 lib.add_book(book_list)
+lib.borrow_book(book_list)
 

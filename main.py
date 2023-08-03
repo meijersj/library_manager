@@ -28,23 +28,25 @@ class Book:
         self.title = title
         self.author = author
         self.is_borrowed = False
+        self.location = 'Home'
 
 class Library:
     def __init__(self):
         self.books = []
         self.members = []
-        self.borrowed = []
+
     def add_book(self,Book):
         self.books.append(Book)
     def add_member(self,Member):
         self.members.append(Member)
 
-    def borrow_book (self,Member,Book):
-        if Book in self.books and Member in self.members:
-            self.books.remove(Book)
-         self.books_borrowed[Member] = Book
-        else
-        print ('error, book is not in the list, try again in 10 days')
+    def borrow_book (self, member_name,book_title):
+        for book in self.books:
+            if book.title == book_title:
+                if not book.is_borrowed:
+                    book.is_borrowed = True
+                    book.location = member_name
+
     def get_member(self):
         return self.members
     def get_books(self):
